@@ -1,64 +1,82 @@
-/* CSS personalizado para el modo oscuro y transiciones */
+/* Puedes ajustar estos estilos según tus preferencias */
 body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #f8f9fa; /* Fondo claro por defecto */
+    color: #212529; /* Texto oscuro por defecto */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-    background-color: #212529;
-    /* Dark background color */
-    color: #f8f9fa;
-    /* Light text color */
+    background-color: #343a40; /* Fondo oscuro en modo oscuro */
+    color: #e2e6ea; /* Texto claro en modo oscuro */
+}
+
+.card {
+    background-color: #fff;
+    transition: background-color 0.3s;
 }
 
 .dark-mode .card {
-    background-color: #343a40;
-    /* Dark card background */
-    border-color: #495057;
-    color: #f8f9fa;
+    background-color: #495057;
+    color: #e2e6ea;
 }
 
 .dark-mode .card-header {
-    background-color: #495057 !important;
-    /* Dark card header background */
+    background-color: #28a745 !important; /* Ajusta el color del header en dark mode si es necesario */
 }
 
-/* Ajuste para el card-footer en modo oscuro */
 .dark-mode .card-footer {
-    background-color: #495057 !important;
-    /* Dark card footer background */
-    color: #f8f9fa !important;
-    /* Light text color for footer */
+    background-color: #212529 !important; /* Ajusta el color del footer en dark mode si es necesario */
 }
 
-.dark-mode .table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
-    /* More subtle stripes in dark mode */
+.dark-mode .table {
+    color: #e2e6ea; /* Color del texto de la tabla en dark mode */
 }
 
-.dark-mode .table-striped>tbody>tr:nth-of-type(even) {
-    background-color: rgba(255, 255, 255, 0.05);
-    /* More subtle stripes in dark mode */
-}
-
-.dark-mode .table-hover>tbody>tr:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Hover in dark mode */
+.dark-mode .table-responsive .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .dark-mode .table-dark {
-    background-color: #2c3e50 !important;
-    /* Dark table header background */
-    color: #f8f9fa !important;
+    background-color: #212529 !important; /* Header de la tabla en dark mode */
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #888;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #ccc;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #a7d9ff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .theme-toggle-btn-container {
     position: absolute;
     top: 15px;
     right: 15px;
-    z-index: 1000;
-    /* Ensures it's above other elements */
 }
 
-.dark-mode .table> :not(caption)>*>* {
-    color: #f8f9fa;
+.icon-svg {
+    width: 1em; /* Un buen tamaño para iconos dentro de botones */
+    height: 1em;
+    vertical-align: -0.125em; /* Ajusta la alineación vertical si es necesario */
+    fill: currentColor; /* Esto hará que el icono herede el color del texto del botón */
+}
+
+/* Opcional: ajustar el color de los iconos para botones específicos */
+.btn-info .icon-svg {
+    fill: #fff; /* Blanco para botones de información */
+}
+
+.btn-danger .icon-svg {
+    fill: #fff; /* Blanco para botones de peligro */
 }
