@@ -1,54 +1,54 @@
 # Inventory-Manager
 
-Este es un Simulador Básico de Gestión de Inventario desarrollado con **HTML**, **CSS (Bootstrap 5.3)** y **JavaScript**. El objetivo principal es proporcionar una herramienta sencilla y atractiva para simular la **administración de productos** en una tienda pequeña, permitiendo agregar, ver, vender y eliminar productos, con persistencia de datos y un selector de tema.
+Este es un Simulador Básico de Gestión de Inventario desarrollado con HTML, CSS (Bootstrap 5.3) y JavaScript. El objetivo principal es proporcionar una herramienta sencilla y atractiva para simular la administración de productos en una tienda pequeña.
 
----
+# 🚀 Características:
 
-### 🚀 Características:
+#### Gestión de Productos:
 
-**Gestión de Productos:**
-- Agregar Producto: Añade nuevos productos al inventario o incrementa la cantidad de los existentes.
+**Agregar Producto:** Añade nuevos productos al inventario o incrementa la cantidad de los existentes.
 
-- Simular Venta: Reduce el stock de un producto existente. Si el stock llega a cero, ofrece la opción de eliminar el producto.
+**Simular Venta:** Reduce el stock de un producto. Si el stock llega a cero, ofrece la opción de eliminar el producto.
 
-- Limpiar Inventario: Eliminar todos los productos existentes enel inventario.
+**Limpiar Inventario:** Elimina todos los productos del inventario de una sola vez.
 
-- Eliminar Producto: Elimina un producto específico del inventario directamente desde la tabla.
+**Eliminar Producto:** Elimina un producto específico directamente desde la tabla.
 
-- Modificar Producto: Modificar cualquier atributo o caracteristica relacionada a un producto específico del inventario.
+**Modificar Producto:** Modifica cualquier atributo (nombre, cantidad, precio) de un producto específico.
 
-### Interfaz Interactiva:
-- Tabla Dinámica: Muestra el inventario actual en una tabla HTML que se actualiza en tiempo real.
+#### Interfaz Interactiva:
 
-- Botones de Acción: Interacción principal a través de botones "Agregar Producto", "Simular Venta" y "Limpiar Inventario". Y para cada registro de la tabla, tenemos la opcion de Eliminar y Modificar producto.
+**Tabla Dinámica:** Muestra el inventario actual en una tabla HTML que se actualiza en tiempo real.
 
-### Persistencia de Datos:
-Los datos del inventario se guardan automáticamente en el localStorage del navegador, lo que significa que tu inventario persistirá incluso si cierras y vuelves a abrir la aplicación.
+**Buscador de Productos:** Permite filtrar productos en tiempo real por su nombre.
 
-### Novedades y Mejoras ✨
+**Botones de Acción:** La interacción principal se realiza a través de botones "Agregar Producto", "Simular Venta" y "Limpiar Inventario", además de las opciones de "Eliminar" y "Modificar" en cada fila de la tabla.
 
-Modales de Bootstrap 5.3: Utilizacion de modales modernos y responsivos de Bootstrap, reemplazando los antiguos prompt, alert y confirm del navegador.
+**Modales de Bootstrap 5.3:** Se utilizan modales modernos y responsivos, reemplazando los antiguos prompt, alert y confirm del navegador.
 
-Buscador de Productos: Se ha añadido un campo de búsqueda en la tabla de inventario que te permite filtrar productos en tiempo real por su nombre.
+**Selector de Tema:** Permite alternar entre un tema claro y oscuro para una mejor experiencia visual.
 
-Acción de Modificar Producto: Ahora cada fila de la tabla incluye un botón para modificar los detalles de un producto (nombre, cantidad, precio).
+# Novedades y Mejoras ✨
 
-Eliminar Todo el Inventario: Se ha agregado un nuevo botón en el pie de la tabla que permite eliminar todos los productos del localStorage de una sola vez.
+**Modularidad del Código:** La lógica de la aplicación está dividida en módulos (main.js, apiService.js), lo que mejora la organización y la reutilización del código.
 
-Funciones de Orden Superior: utilizacion de find, filter, map y reduce
+**API Simulada con fetch:** Los datos del inventario se gestionan a través de una API simulada que utiliza la función fetch para leer los productos de un archivo products.json. Esto desacopla la lógica de la interfaz de usuario de la lógica de datos.
 
-ID Únicos para Productos: Cada producto ahora tiene un ID único.
+**Manejo Asíncrono de Datos:** Las operaciones de carga, agregación, modificación y eliminación de productos son asíncronas, imitando el comportamiento de una aplicación web moderna que interactúa con un servidor.
 
-### Estructura del proyecto
+**Manejo de Errores:** Todas las llamadas a la API simulada están envueltas en bloques try...catch para garantizar un manejo de errores robusto.
 
-```
+# Estructura del proyecto
+
 inventory-manager/
 ├── index.html
 ├── assets/
-|    └── icons
+│   └── icons
 ├── css/
-|    └── styles.css
+│   └── styles.css
+├── data/
+│   └── products.json
 └── js/
+    ├── apiService.js
     ├── main.js
     └── theme.js
-```

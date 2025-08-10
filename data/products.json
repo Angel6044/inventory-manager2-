@@ -1,0 +1,12 @@
+[
+    { "id": 1, "nombre": "Leche", "cantidad": 20, "precio": 1.50 },
+    { "id": 2, "nombre": "Pan", "cantidad": 30, "precio": 2.00 },
+    { "id": 3, "nombre": "Huevos", "cantidad": 12, "precio": 3.25 },
+    { "id": 4, "nombre": "Arroz", "cantidad": 15, "precio": 2.75 },
+    { "id": 5, "nombre": "Pasta", "cantidad": 25, "precio": 1.80 },
+    { "id": 6, "nombre": "Azúcar", "cantidad": 10, "precio": 4.00 },
+    { "id": 7, "nombre": "Café", "cantidad": 8, "precio": 5.50 },
+    { "id": 8, "nombre": "Aceite", "cantidad": 7, "precio": 6.75 },
+    { "id": 9, "nombre": "Jabón", "cantidad": 18, "precio": 1.20 },
+    { "id": 10, "nombre": "Champú", "cantidad": 9, "precio": 3.80 }
+]
